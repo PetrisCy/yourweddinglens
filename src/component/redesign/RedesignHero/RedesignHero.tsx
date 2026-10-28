@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { heroImage } from "@/lib/images";
 import styles from "./RedesignHero.module.css";
 
 export default function RedesignHero() {
@@ -6,7 +7,7 @@ export default function RedesignHero() {
     <section id="top" className={styles.hero} aria-labelledby="redesign-hero-heading">
       <Image
         className={styles.photograph}
-        src="/images/hero-wedding.webp"
+        src={heroImage}
         alt="A bride and groom holding hands as they walk down an elegant staircase."
         fill
         priority

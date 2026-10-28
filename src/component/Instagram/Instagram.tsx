@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { celebrationImage } from "@/lib/images";
 import styles from "./Instagram.module.css";
 
 export default function Instagram() {
@@ -16,7 +17,7 @@ export default function Instagram() {
       >
         <figure className={styles.photograph}>
           <Image
-            src="/images/wedding-celebration.webp"
+            src={celebrationImage}
             alt="A newly married couple celebrating with a bouquet of flowers"
             fill
             sizes="(max-width: 700px) 80vw, 40.12vw"

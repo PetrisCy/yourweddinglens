@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { familyImage } from "@/lib/images";
 import styles from "./RedesignPhilosophy.module.css";
 
 export default function RedesignPhilosophy() {
@@ -6,7 +7,7 @@ export default function RedesignPhilosophy() {
     <section className={styles.section} aria-label="The people who make your story">
       <figure className={styles.photograph}>
         <Image
-          src="/images/family-moment.webp"
+          src={familyImage}
           alt="A father kissing his daughter on her wedding day, surrounded by the people she loves."
           fill
           sizes="(max-width: 760px) 100vw, 50vw"

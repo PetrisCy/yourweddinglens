@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { firstReelImage, secondReelImage } from "@/lib/images";
 import { useRef, useState } from "react";
 import styles from "./RedesignMoments.module.css";
 
@@ -8,12 +9,12 @@ const reels = [
   {
     number: "01",
     href: "https://www.instagram.com/reel/DeG6WawMapV/",
-    image: "/images/redesign/reel-01.jpg",
+    image: firstReelImage,
   },
   {
     number: "02",
     href: "https://www.instagram.com/reel/DeRC5avMudZ/",
-    image: "/images/redesign/reel-02.jpg",
+    image: secondReelImage,
   },
 ];
 

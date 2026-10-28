@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { celebrationImage } from "@/lib/images";
 import styles from "./RedesignContact.module.css";
 
 export default function RedesignContact() {
@@ -21,7 +22,7 @@ export default function RedesignContact() {
         </div>
         <figure className={styles.photograph}>
           <Image
-            src="/images/wedding-celebration.webp"
+            src={celebrationImage}
             alt="A joyful bride and groom celebrating together, the bride holding a bouquet."
             fill
             sizes="(max-width: 760px) 90vw, 40vw"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { heroImage } from "@/lib/images";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -6,7 +7,7 @@ export default function Hero() {
     <section className={styles.section} aria-labelledby="site-title">
       <h1 id="site-title" className="sr-only">Your Wedding Lens</h1>
       <Image
-        src="/images/hero-wedding.webp"
+        src={heroImage}
         alt="A bride and groom holding hands as they walk down an elegant staircase."
         fill
         priority

@@ -26,6 +26,12 @@ npm run build
 npm start
 ```
 
+## GitHub Pages
+
+The workflow in `.github/workflows/pages.yml` builds and publishes the static website on every push to `main`. In repository Settings → Pages, the publishing source must be **GitHub Actions**. Publishing the source branch directly shows the README instead of the application.
+
+The Pages build sets `GITHUB_PAGES=true` and takes the base path from GitHub's Pages configuration. It exports HTML, CSS, JavaScript, images, and fonts into `out/`, including the `/redesign/` route. The contact form submits directly to Web3Forms and does not require a Next.js server. Local development and ordinary Next.js builds retain their normal configuration.
+
 ## Contact form
 
 The default page sends name, email, phone number, and message using [Web3Forms](https://web3forms.com/). The configured form access key controls the recipient; use the key associated with `maria.frangeskou@live.com`. Submissions stay on the page and show sending, success, or retry feedback. Success is displayed only when the API confirms acceptance. Failed submissions preserve the entered text. A hidden `botcheck` checkbox helps filter spam, and the visitor's email is used for replies.
