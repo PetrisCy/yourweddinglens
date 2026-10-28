@@ -8,7 +8,7 @@ export default function Hero() {
       <h1 id="site-title" className="sr-only">Your Wedding Lens</h1>
       <Image
         src={heroImage}
-        alt="A bride and groom holding hands as they walk down an elegant staircase."
+        alt="A bride and groom kissing in a vintage convertible."
         fill
         priority
         sizes="100vw"

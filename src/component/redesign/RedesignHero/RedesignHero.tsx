@@ -8,7 +8,7 @@ export default function RedesignHero() {
       <Image
         className={styles.photograph}
         src={heroImage}
-        alt="A bride and groom holding hands as they walk down an elegant staircase."
+        alt="A bride and groom kissing in a vintage convertible."
         fill
         priority
         sizes="100vw"
