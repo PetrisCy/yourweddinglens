@@ -115,7 +115,7 @@ export default function Contact() {
           </div>
           <div className={`${styles.actions} ${styles.fullWidth}`}>
             <button className={styles.button} type="submit" disabled={isSending}>
-              {isSending ? "Sending…" : "Send message"} <span aria-hidden="true">↗</span>
+              {isSending ? "Sending…" : "Send message"}
             </button>
             <p id="contact-status" className={styles.note} role="status" aria-live="polite" aria-atomic="true">
               {status === "sending" && "Sending your enquiry…"}

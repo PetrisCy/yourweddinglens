@@ -65,7 +65,7 @@ export default function RedesignPackages({ enquiryHref = "#enquire", dark = fals
                 {item.features.map(feature => <li key={feature}>{feature}</li>)}
               </ul>
               <a className={styles.enquire} href={enquiryHref}>
-                Enquire about this package <span aria-hidden="true">↗</span>
+                Enquire about this package
               </a>
             </article>
           ))}

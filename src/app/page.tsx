@@ -19,7 +19,7 @@ export default function Home() {
         <WeddingMoment />
         <Philosophy />
         <div className={redesignStyles.shell}>
-          <RedesignPackages enquiryHref="#instagram" dark />
+          <RedesignPackages enquiryHref="#contact" dark />
         </div>
         <BookingNotes />
         <Instagram />
