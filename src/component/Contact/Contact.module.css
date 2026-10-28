@@ -1,0 +1,201 @@
+.section {
+  padding: 112px 6vw 84px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  scroll-margin-top: 24px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(40px, 7vw, 100px);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.5vw, 66px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.copy {
+  max-width: 28ch;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin-top: 32px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  color: var(--color-paper);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.messagesOnly {
+  font-size: 13px;
+  opacity: 0.76;
+  white-space: nowrap;
+}
+
+.socialLink svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.socialLink[href]:hover {
+  border-bottom-color: var(--color-paper);
+  color: var(--color-cream);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  min-width: 0;
+}
+
+.field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.honeypot {
+  display: none;
+}
+
+.field label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: 10px 2px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-paper);
+  color-scheme: dark;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  border-bottom-color: var(--color-paper);
+  outline: 1px solid var(--color-paper);
+  outline-offset: 5px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid var(--color-paper);
+  background: transparent;
+  color: var(--color-paper);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.note {
+  overflow-wrap: anywhere;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.fallback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.fallback a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-underline-offset: 5px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 72px 24px 64px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

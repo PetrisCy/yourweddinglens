@@ -1,0 +1,84 @@
+.section {
+  padding: clamp(72px, 8vw, 124px) max(24px, 6vw);
+  background: var(--v2-paper);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 8vw, 120px);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin-bottom: 26px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.13em;
+  line-height: 1.6;
+}
+
+.heading {
+  max-width: 12ch;
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 4.5vw, 66px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.copy {
+  max-width: 52ch;
+  padding-top: 3px;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.lead {
+  font-size: clamp(21px, 1.8vw, 26px);
+  line-height: 1.5;
+}
+
+.copy p + p {
+  margin-top: 20px;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.name {
+  font-size: 36px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.role {
+  max-width: 16ch;
+  padding-left: 22px;
+  border-left: 1px solid var(--v2-rule);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .heading {
+    max-width: 100%;
+  }
+
+  .copy {
+    font-size: 17px;
+  }
+}

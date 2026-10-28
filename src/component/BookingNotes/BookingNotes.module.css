@@ -1,0 +1,44 @@
+.section {
+  display: flex;
+  align-items: center;
+  padding: clamp(64px, 8.08vw, 132px);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-mono), monospace;
+}
+
+.content {
+  width: 100%;
+}
+
+.heading {
+  margin: 0 0 clamp(22px, 2.15vw, 35px);
+  font-size: clamp(18px, 1.855vw, 30px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.notes {
+  display: grid;
+  gap: clamp(20px, 2.123vw, 35px);
+  margin: 0;
+  padding-left: clamp(24px, 2.48vw, 40px);
+  font-size: clamp(14px, 1.464vw, 24px);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.notes strong {
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 64px 24px;
+  }
+
+  .notes {
+    gap: 24px;
+    line-height: 1.65;
+  }
+}

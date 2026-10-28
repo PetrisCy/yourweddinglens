@@ -1,0 +1,284 @@
+.section {
+  padding: 112px 6vw 84px;
+  color: var(--v2-ink);
+  background: var(--v2-paper);
+  scroll-margin-top: 24px;
+}
+
+.dark {
+  --v2-paper: var(--color-ink);
+  --v2-ink: var(--color-paper);
+  --v2-muted: rgba(255, 255, 255, 0.76);
+  --v2-rule: rgba(255, 255, 255, 0.22);
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.eyebrow,
+.occasion,
+.deliveryLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.5vw, 66px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+}
+
+.description {
+  max-width: 31ch;
+  padding-bottom: 4px;
+  color: var(--v2-muted);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.packages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 64px;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 8px 32px 0;
+  border-left: 1px solid var(--v2-rule);
+}
+
+.package:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.package:last-child {
+  padding-right: 0;
+}
+
+.occasion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.number {
+  color: var(--v2-muted);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.2vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.price {
+  margin-top: 14px;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.coverage {
+  margin-top: 28px;
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.features {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 32px;
+  padding: 0;
+  list-style: none;
+  color: var(--v2-muted);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.features li {
+  position: relative;
+  padding-left: 17px;
+}
+
+.features li::before {
+  position: absolute;
+  top: 0.64em;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.enquire {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  margin-top: auto;
+  border-bottom: 1px solid var(--v2-ink);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.enquire span {
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+}
+
+.enquire:hover {
+  color: var(--v2-muted);
+}
+
+.delivery {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  margin-top: 52px;
+  padding-top: 26px;
+  border-top: 1px solid var(--v2-rule);
+}
+
+.deliveryLabel {
+  padding-top: 4px;
+}
+
+.deliveryCopy {
+  grid-column: 1 / -1;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.deliveryCopy p + p {
+  color: var(--v2-muted);
+}
+
+@media (max-width: 1000px) {
+  .intro {
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .description {
+    max-width: 27ch;
+  }
+
+  .package {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .occasion {
+    gap: 7px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 72px 24px 56px;
+  }
+
+  .intro {
+    display: block;
+  }
+
+  .heading {
+    font-size: clamp(36px, 8.8vw, 52px);
+  }
+
+  .description {
+    max-width: 40ch;
+    margin-top: 24px;
+  }
+
+  .packages {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .package,
+  .package:first-child,
+  .package:last-child {
+    position: relative;
+    padding: 32px 0;
+    border-top: 1px solid var(--v2-rule);
+    border-left: 0;
+  }
+
+  .occasion {
+    gap: 14px;
+    margin-bottom: 18px;
+    font-size: 11px;
+  }
+
+  .name {
+    max-width: calc(100% - 108px);
+    font-size: 38px;
+  }
+
+  .price {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    margin-top: 0;
+    font-size: 35px;
+  }
+
+  .coverage {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .features {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .enquire {
+    margin-top: 0;
+  }
+
+  .delivery {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 0;
+  }
+}

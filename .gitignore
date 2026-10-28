@@ -1,0 +1,12 @@
+node_modules/
+.npm-cache/
+.next/
+out/
+.reference/
+.reference-tools/
+.backups/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.env*.local
+next-env.d.ts

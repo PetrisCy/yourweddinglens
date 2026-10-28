@@ -1,0 +1,21 @@
+.shell {
+  --v2-paper: #f7f3eb;
+  --v2-white: #fffdf9;
+  --v2-ink: #2d2b25;
+  --v2-muted: #6d685e;
+  --v2-rule: rgba(45, 43, 37, 0.18);
+  background: var(--v2-paper);
+  color: var(--v2-ink);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.shell :global(section[id]) {
+  scroll-margin-top: 24px;
+}
+
+.shell ::selection {
+  background: #dfd6c3;
+  color: var(--v2-ink);
+}

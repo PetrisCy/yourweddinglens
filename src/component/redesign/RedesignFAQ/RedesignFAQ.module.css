@@ -1,0 +1,149 @@
+.section {
+  padding: 104px 6vw 112px;
+  color: var(--v2-ink);
+  background: var(--v2-paper);
+  scroll-margin-top: 24px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 96px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.heading em {
+  font-weight: 400;
+}
+
+.invitation {
+  max-width: 26ch;
+  margin-top: 26px;
+  color: var(--v2-muted);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.invitation a {
+  color: var(--v2-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.questions {
+  align-self: start;
+  border-top: 1px solid var(--v2-rule);
+}
+
+.item {
+  border-bottom: 1px solid var(--v2-rule);
+}
+
+.question {
+  position: relative;
+  padding: 25px 36px 25px 0;
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+  list-style: none;
+  cursor: pointer;
+}
+
+.question::-webkit-details-marker {
+  display: none;
+}
+
+.question::after {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 24px;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  content: "+";
+}
+
+.item[open] > .question::after {
+  content: "−";
+}
+
+.question:hover {
+  color: var(--v2-muted);
+}
+
+.question:focus-visible {
+  outline: 2px solid var(--v2-ink);
+  outline-offset: 5px;
+}
+
+.answer {
+  padding: 0 32px 28px 0;
+  color: var(--v2-muted);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+  .inner {
+    gap: 48px;
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 64px 24px 72px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .heading {
+    font-size: clamp(38px, 8.8vw, 52px);
+  }
+
+  .invitation {
+    max-width: 100%;
+    margin-top: 22px;
+  }
+
+  .question {
+    padding: 23px 30px 23px 0;
+    font-size: 21px;
+  }
+
+  .question::after {
+    top: 23px;
+  }
+
+  .answer {
+    padding-right: 8px;
+    padding-bottom: 24px;
+    font-size: 18px;
+  }
+}

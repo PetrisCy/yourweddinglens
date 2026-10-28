@@ -1,0 +1,62 @@
+.section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1024.5 / 576;
+  overflow: hidden;
+  color: var(--color-paper);
+  background: var(--color-ink);
+}
+
+.photo {
+  object-fit: cover;
+  object-position: center 49%;
+}
+
+.monogram {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: "Atteron", "Bodoni MT", "Times New Roman", serif;
+  font-size: 21.1322vw;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.w,
+.l {
+  position: absolute;
+}
+
+.w {
+  top: 21.1%;
+  left: 37.35%;
+}
+
+.l {
+  top: 41.6%;
+  left: 46.86%;
+}
+
+@media (max-width: 700px) {
+  .section {
+    aspect-ratio: 4 / 5;
+  }
+
+  .photo {
+    object-position: 64% center;
+  }
+
+  .monogram {
+    font-size: 34vw;
+  }
+
+  .w {
+    top: 29%;
+    left: 27%;
+  }
+
+  .l {
+    top: 44%;
+    left: 42%;
+  }
+}
